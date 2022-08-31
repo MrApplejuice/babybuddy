@@ -1,0 +1,17 @@
+app-id: net.cdubz.babybuddy
+runtime: org.freedesktop.Platform
+runtime-version: 21.08
+sdk: org.freedesktop.Sdk
+command: /app/flatpak-start.sh
+modules:
+  - flatpak-pip.yaml
+  - name: net.cdubz.babybuddy
+    buildsystem: simple
+    build-commands:
+      - cp -ra . $FLATPAK_DEST
+      - chmod +x $FLATPAK_DEST/flatpak-start.sh
+    sources:
+      - type: dir
+        path: .
+finish-args:
+  - --share=network

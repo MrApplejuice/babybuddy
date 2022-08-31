@@ -1,0 +1,464 @@
+# Generated with flatpak-pip-generator --requirements-file flatpak-requirements.txt --output flatpak-pip --yaml
+build-commands: []
+buildsystem: simple
+modules:
+  - name: python3-asgiref
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "asgiref==3.5.2" --no-build-isolation
+    sources:
+      - &id005
+        type: file
+        url: https://files.pythonhosted.org/packages/af/6d/ea3a5c3027c3f14b0321cd4f7e594c776ebe64e4b927432ca6917512a4f7/asgiref-3.5.2-py3-none-any.whl
+        sha256: 1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4
+  - name: python3-boto3
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "boto3==1.24.28" --no-build-isolation
+    sources:
+      - &id020
+        type: file
+        url: https://files.pythonhosted.org/packages/5e/c6/af903b5fab3f9b5b1e883f49a770066314c6dcceb589cf938d48c89556c1/s3transfer-0.6.0-py3-none-any.whl
+        sha256: 06176b74f3a15f61f1b4f25a1fc29a4429040b7647133a463da8fa5bd28d5ecd
+      - &id001
+        type: file
+        url: https://files.pythonhosted.org/packages/fa/9e/f7662cd2c326b74eee8bb91e2bf3ea61f2b2d62738863d53fe801dcfdeca/botocore-1.27.28-py3-none-any.whl
+        sha256: cd4dff88419c7b6865f91551db3eb526283ebc56dc99f1d9b7adb5aa080674f8
+      - type: file
+        url: https://files.pythonhosted.org/packages/21/b1/fafeff38043e4d4c18948109b96df295a7a11350fad32744aaa4e4917004/boto3-1.24.28-py3-none-any.whl
+        sha256: efce6dcf0b708cf609b2583f0134b1896f4e76c8b1e25702d50c81719a213664
+      - &id002
+        type: file
+        url: https://files.pythonhosted.org/packages/68/47/93d3d28e97c7577f563903907912f4b3804054e4877a5ba6651f7182c53b/urllib3-1.26.10-py2.py3-none-any.whl
+        sha256: 8298d6d56d39be0e3bc13c1c97d133f9b45d797169a0e11cdd0e0489d786f7ec
+      - &id003
+        type: file
+        url: https://files.pythonhosted.org/packages/31/b4/b9b800c45527aadd64d5b442f9b932b00648617eb5d63d2c7a6587b7cafc/jmespath-1.0.1-py3-none-any.whl
+        sha256: 02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980
+      - &id004
+        type: file
+        url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
+        sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
+  - name: python3-botocore
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "botocore==1.27.28" --no-build-isolation
+    sources:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+  - name: python3-defusedxml
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "defusedxml==0.7.1" --no-build-isolation
+    sources:
+      - &id011
+        type: file
+        url: https://files.pythonhosted.org/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl
+        sha256: a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61
+  - name: python3-diff-match-patch
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "diff-match-patch==20200713" --no-build-isolation
+    sources:
+      - &id010
+        type: file
+        url: https://files.pythonhosted.org/packages/c2/5a/9aa3b95a1d108b82fadb1eed4c3773d19069f765bd4c360a930e107138ee/diff_match_patch-20200713-py3-none-any.whl
+        sha256: 8bf9d9c4e059d917b5c6312bac0c137971a32815ddbda9c682b949f2986b4d34
+  - name: python3-dj-database-url
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "dj-database-url==0.5.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/d4/a6/4b8578c1848690d0c307c7c0596af2077536c9ef2a04d42b00fabaa7e49d/dj_database_url-0.5.0-py2.py3-none-any.whl
+        sha256: 851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
+  - name: python3-django
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django==4.0.6" --no-build-isolation
+    sources:
+      - *id005
+      - &id006
+        type: file
+        url: https://files.pythonhosted.org/packages/05/40/d836d55fb3f467243ee839ab7b814822fda522cd395fa41e282684e71ee5/sqlparse-0.4.2-py3-none-any.whl
+        sha256: 48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d
+      - &id008
+        type: file
+        url: https://files.pythonhosted.org/packages/12/97/e341b13d605a9d0732a37975ce6bfae643c296721b8644f42d5d720c99bf/Django-4.0.6-py3-none-any.whl
+        sha256: ca54ebedfcbc60d191391efbf02ba68fb52165b8bf6ccd6fe71f098cac1fe59e
+      - &id007
+        type: file
+        url: https://files.pythonhosted.org/packages/ad/85/475e514c3140937cf435954f78dedea1861aeab7662d11de232bdaa90655/backports.zoneinfo-0.2.1.tar.gz
+        sha256: fadbfe37f74051d024037f223b8e001611eac868b5c5b06144ef4d8b799862f2
+  - name: python3-django-appconf
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-appconf==1.0.5" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - &id009
+        type: file
+        url: https://files.pythonhosted.org/packages/48/95/78c279b7861efd8b0282e9373d40ec7247664bf1246a6cdc9e59d281ceb0/django_appconf-1.0.5-py3-none-any.whl
+        sha256: ae9f864ee1958c815a965ed63b3fba4874eec13de10236ba063a788f9a17389d
+      - *id007
+      - *id008
+  - name: python3-django-axes
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-axes==5.35.0" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - &id012
+        type: file
+        url: https://files.pythonhosted.org/packages/45/1e/61cd5bde3a7c640ae4e935c9910e6b4c4a492cb78ff32915f779ff5150ff/django_ipware-4.0.2-py2.py3-none-any.whl
+        sha256: 878dbb06a87e25550798e9ef3204ed70a200dd8b15e47dcef848cf08244f04c9
+      - type: file
+        url: https://files.pythonhosted.org/packages/43/79/6c0bf6e79509f9eafa065dc67d45f7677a5ede84a66d3234ec68febd12da/django_axes-5.35.0-py3-none-any.whl
+        sha256: f74c096ffff3133a49247bab9299f5280647b70bb27784475d49cbf19672458e
+      - *id007
+      - *id008
+  - name: python3-django-filter
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-filter==22.1" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - type: file
+        url: https://files.pythonhosted.org/packages/58/99/3dc8a7d997a18596c15f588690d46e9802d983f6c1486813ec4db018c481/django_filter-22.1-py3-none-any.whl
+        sha256: ed429e34760127e3520a67f415bec4c905d4649fbe45d0d6da37e6ff5e0287eb
+      - *id007
+      - *id008
+  - name: python3-django-imagekit
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-imagekit==4.1.0" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - type: file
+        url: https://files.pythonhosted.org/packages/ba/c5/301cf63106b0a2777ce24ae242951f4c8d5d5344ee7bcd647853cb57501f/django_imagekit-4.1.0-py2.py3-none-any.whl
+        sha256: 87e36f8dc1d8745647881f4366ef4965225f048042dacebbee0dcb87425defef
+      - *id009
+      - *id007
+      - &id017
+        type: file
+        url: https://files.pythonhosted.org/packages/c4/5c/318d9c20f309e6a79ea4d4605f86597d05f3e007d3d1925ff02474808659/pilkit-2.0.tar.gz
+        sha256: ddb30c2f0198a147e56b151476c3bb9fe045fbfd5b0a0fa2a3148dba62d1559f
+      - *id008
+  - name: python3-django-import-export
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-import-export==2.8.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/07/ea/b9732e120d1a6115ceef978f9c1d804e920b121846dae457e339867b627e/django_import_export-2.8.0-py3-none-any.whl
+        sha256: 31d7dcfba22251e3ef93accb7da844f58c4d78585db9dd7dae37bb76f939da2c
+      - *id005
+      - *id006
+      - &id021
+        type: file
+        url: https://files.pythonhosted.org/packages/41/62/9771bc91ee9e9faa8f00caefd51f77d348cc72f910a96fdd5e2a4cc28ac3/tablib-3.2.1-py3-none-any.whl
+        sha256: 870d7e688f738531a14937a055e8bba404fbc388e77d4d500b2c904075d1019c
+      - &id016
+        type: file
+        url: https://files.pythonhosted.org/packages/7b/60/9afac4fd6feee0ac09339de4101ee452ea643d26e9ce44c7708a0023f503/openpyxl-3.0.10-py2.py3-none-any.whl
+        sha256: 0ab6d25d01799f97a9464630abacbb34aafecdcaa0ef3cba6d6b3499867d0355
+      - &id019
+        type: file
+        url: https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz
+        sha256: 68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2
+      - &id022
+        type: file
+        url: https://files.pythonhosted.org/packages/a6/0c/c2a72d51fe56e08a08acc85d13013558a2d793028ae7385448a6ccdfae64/xlrd-2.0.1-py2.py3-none-any.whl
+        sha256: 6a33ee89877bd9abc1158129f6e94be74e2679636b8a205b43b85206c3f0bbdd
+      - *id010
+      - &id023
+        type: file
+        url: https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl
+        sha256: a082260524678ba48a297d922cc385f58278b8aa68741596a87de01a9c628b2e
+      - *id007
+      - *id008
+      - &id014
+        type: file
+        url: https://files.pythonhosted.org/packages/4e/ca/f43541b41bd17fc945cfae7ea44f1661dc21ea65ecc944a6fa138eead94c/MarkupPy-1.14.tar.gz
+        sha256: 1adee2c0a542af378fe84548ff6f6b0168f3cb7f426b46961038a2bcfaad0d5f
+      - &id013
+        type: file
+        url: https://files.pythonhosted.org/packages/96/c2/3dd434b0108730014f1b96fd286040dc3bcb70066346f7e01ec2ac95865f/et_xmlfile-1.1.0-py3-none-any.whl
+        sha256: a2ba85d1d6a74ef63837eed693bcb89c3f752169b0e3e7ae5b16ca5e1b3deada
+      - &id015
+        type: file
+        url: https://files.pythonhosted.org/packages/97/73/8ade73f6749177003f7ce3304f524774adda96e6aaab30ea79fd8fda7934/odfpy-1.4.1.tar.gz
+        sha256: db766a6e59c5103212f3cc92ec8dd50a0f3a02790233ed0b52148b70d3c438ec
+      - *id011
+  - name: python3-django-ipware
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-ipware==4.0.2" --no-build-isolation
+    sources:
+      - *id012
+  - name: python3-django-storages
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-storages==1.12.3" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - type: file
+        url: https://files.pythonhosted.org/packages/13/f9/61740c0224454142354914e539d06dd49c6eb8bd863a583a1624acdf6c02/django_storages-1.12.3-py3-none-any.whl
+        sha256: 204a99f218b747c46edbfeeb1310d357f83f90fa6a6024d8d0a3f422570cee84
+      - *id007
+      - *id008
+  - name: python3-django-taggit
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-taggit==3.0.0" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - type: file
+        url: https://files.pythonhosted.org/packages/5b/44/011a15a6e006873c37deee1d3d43c8cc88166ef3b7ce4bf4b7d73a089e31/django_taggit-3.0.0-py3-none-any.whl
+        sha256: ca2df20399a11321db75988404afb640a08eff61e52bde35f6c16f307004ec9e
+      - *id007
+      - *id008
+  - name: python3-django-widget-tweaks
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "django-widget-tweaks==1.4.12" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/5f/bb/855748bfc347e6df94cae36a6da0043620e148b3965c33a79e5ad4af7036/django_widget_tweaks-1.4.12-py3-none-any.whl
+        sha256: fe6b17d5d595c63331f300917980db2afcf71f240ab9341b954aea8f45d25b9a
+  - name: python3-djangorestframework
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "djangorestframework==3.13.1" --no-build-isolation
+    sources:
+      - *id005
+      - *id006
+      - type: file
+        url: https://files.pythonhosted.org/packages/c8/45/2588c7c5a01a7da6822c6ffbc9a731d498c318a803a29ae780ec635ea41d/djangorestframework-3.13.1-py3-none-any.whl
+        sha256: 24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa
+      - &id018
+        type: file
+        url: https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl
+        sha256: e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
+      - *id007
+      - *id008
+  - name: python3-et-xmlfile
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "et-xmlfile==1.1.0" --no-build-isolation
+    sources:
+      - *id013
+  - name: python3-faker
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "faker==13.15.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/51/d2/6b87d0817c57cb1b8cf5f4582d6e43f6f702f8c99d8d4a5dc1aa143268a8/Faker-13.15.0-py3-none-any.whl
+        sha256: 8e94a749d2f3d9b367f61eb33be6a534f0a2d305c54e912ee6618370e3278db7
+      - *id004
+  - name: python3-gunicorn
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "gunicorn==20.1.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/e4/dd/5b190393e6066286773a67dfcc2f9492058e9b57c4867a95f1ba5caf0a83/gunicorn-20.1.0-py3-none-any.whl
+        sha256: 9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e
+  - name: python3-jmespath
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "jmespath==1.0.1" --no-build-isolation
+    sources:
+      - *id003
+  - name: python3-markuppy
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "markuppy==1.14" --no-build-isolation
+    sources:
+      - *id014
+  - name: python3-odfpy
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "odfpy==1.4.1" --no-build-isolation
+    sources:
+      - *id015
+      - *id011
+  - name: python3-openpyxl
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "openpyxl==3.0.10" --no-build-isolation
+    sources:
+      - *id016
+      - *id013
+  - name: python3-pilkit
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pilkit==2.0" --no-build-isolation
+    sources:
+      - *id017
+  - name: python3-pillow
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pillow==9.2.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz
+        sha256: 75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04
+  - name: python3-plotly
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "plotly==5.9.0" --no-build-isolation
+    sources:
+      - &id024
+        type: file
+        url: https://files.pythonhosted.org/packages/f2/a5/f86bc8d67c979020438c8559cc70cfe3a1643fd160d35e09c9cca6a09189/tenacity-8.0.1-py3-none-any.whl
+        sha256: f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a
+      - type: file
+        url: https://files.pythonhosted.org/packages/2d/6a/2c2e9ed190066646bbf1620c0b67f8e363e0024ee7bf0d3ea1fdcc9af3ae/plotly-5.9.0-py2.py3-none-any.whl
+        sha256: 9acf168915101caac82ed6da3390840c622d9d4e4a78cbe1260f52501efc3117
+  - name: python3-python-dateutil
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "python-dateutil==2.8.2" --no-build-isolation
+    sources:
+      - *id004
+  - name: python3-python-dotenv
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "python-dotenv==0.20.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/30/5f/2e5c564bd86349fe6b82ca840f46acf6f4bb76d79ba9057fce3d3e008864/python_dotenv-0.20.0-py3-none-any.whl
+        sha256: d92a187be61fe482e4fd675b6d52200e7be63a12b724abbf931a40ce4fa92938
+  - name: python3-pytz
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pytz==2022.1" --no-build-isolation
+    sources:
+      - *id018
+  - name: python3-pyyaml
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pyyaml==6.0" --no-build-isolation
+    sources:
+      - *id019
+  - name: python3-s3transfer
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "s3transfer==0.6.0" --no-build-isolation
+    sources:
+      - *id020
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+  - name: python3-sqlparse
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "sqlparse==0.4.2" --no-build-isolation
+    sources:
+      - *id006
+  - name: python3-tablib
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "tablib[xls,yaml,xlsx,html,ods]==3.2.1" --no-build-isolation
+    sources:
+      - *id021
+      - *id016
+      - *id019
+      - *id022
+      - *id023
+      - *id014
+      - *id013
+      - *id015
+      - *id011
+  - name: python3-tenacity
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "tenacity==8.0.1" --no-build-isolation
+    sources:
+      - *id024
+  - name: python3-uritemplate
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "uritemplate==4.1.1" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/81/c0/7461b49cd25aeece13766f02ee576d1db528f1c37ce69aee300e075b485b/uritemplate-4.1.1-py2.py3-none-any.whl
+        sha256: 830c08b8d99bdd312ea4ead05994a38e8936266f84b9a7878232db50b044e02e
+  - name: python3-urllib3
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "urllib3==1.26.10" --no-build-isolation
+    sources:
+      - *id002
+  - name: python3-whitenoise
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "whitenoise==6.2.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/a7/e4/9cbdc2c564add81428cd9fca531f2adeb618dca2f64fe7f52f77e5a5627f/whitenoise-6.2.0-py3-none-any.whl
+        sha256: 8e9c600a5c18bd17655ef668ad55b5edf6c24ce9bdca5bf607649ca4b1e8e2c2
+  - name: python3-xlrd
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "xlrd==2.0.1" --no-build-isolation
+    sources:
+      - *id022
+  - name: python3-xlwt
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "xlwt==1.3.0" --no-build-isolation
+    sources:
+      - *id023
+name: flatpak-pip
